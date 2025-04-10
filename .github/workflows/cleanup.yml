@@ -1,0 +1,20 @@
+name: Cleanup Wix Rezerwacje
+
+on:
+  schedule:
+    - cron: '0 * * * *' # ⏰ co godzinę
+  workflow_dispatch: # 👉 możliwość uruchomienia ręcznie z GitHuba
+
+jobs:
+  run-cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm install node-fetch
+
+      - name: Run cleanup script
+        run: node index.js
