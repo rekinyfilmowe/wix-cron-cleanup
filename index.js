@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const WIX_CLEANUP_URL = "https://twojastrona/_functions/cleanup?secret=tajnyTOKEN123";
+const WIX_CLEANUP_URL = "https://rekinyfilmowe.pl/_functions/cleanup?secret=tajnyTOKEN123";
 
 async function runCleanup() {
   try {
